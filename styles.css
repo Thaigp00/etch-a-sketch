@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    height: 100vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0A0908;
+    background-color: #CCC5B9;
+}
+
+#title {
+    font-size: 4rem;
+}
+
+
+#content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 100vw;
+}
+
+#content > * {
+    width: 400px;
+    height: 400px;
+}
+
+#sketch {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    background-color: #FFF;
+    box-shadow: 0 0 16px #0A0908;
+}
+
+.square.gray {
+    background-color: #EEE;
+}
+
+.square:hover {
+    background-color: #AAA;
+}
+
+#left-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    order: -1;
+}
+
+.button {
+    cursor: pointer;
+    width: 250px;
+    padding: 1rem 5rem;
+    border: 2px solid #0A0908;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0A0908;
+    background-color: #CCC5B9;
+}
+
+.button:hover {
+    background-color: #DCD5C9;
+}
+
+.button:active {
+    background-color: #BCB5A9;
+}
+
+.button.active {
+    color: #CCC5B9;
+    background-color: #0A0908;
+}
+
+.button.active:hover {
+    background-color: #151413;
+    border-color: #151413;
+}
+
+.button.active:active {
+    background-color: #000;
+    border-color: #000;
+}
+
+#darkening-btn {
+    align-self: center;
+}
+
+#right-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #CCC5B9;
+}
+
+.color {
+    cursor: pointer;
+    box-shadow: 0 0 0.25rem #0A0908;
+    border: 0;
+    border-radius: 100%;
+    padding: 2rem;
+}
+
+.color.selected {
+    box-shadow: 0.5rem 0.5rem 1.5rem #0A0908;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    padding: 1rem 6.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: #CCC5B9;
+    background-color: #0A0908;
+}
+
+.social-media {
+    width: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
