@@ -4,14 +4,13 @@ let currentMode = "default";
 
 function createSketch() {
     const sketch = document.querySelector("#sketch");
-    sketch.addEventListener("contextmenu", e => e.preventDefault());
+    sketch.addEventListener("contextmenu", e => e.preventDefault()); 
 
     const sketchSize = sketch.offsetWidth;
     const squareSize = sketchSize / currentSquareAmount;
     for (let i = 0; i < currentSquareAmount; i++) {
         for (let j = 1; j <= currentSquareAmount; j++) {
             const square = document.createElement("div");
-
             square.style.width = `${squareSize}px`;
             square.style.height = `${squareSize}px`;
 
@@ -45,10 +44,9 @@ function updateSquare(e, square) {
                 const randomRed = Math.floor(Math.random() * 256);
                 const randomGreen = Math.floor(Math.random() * 256);
                 const randomBlue = Math.floor(Math.random() * 256);
-
                 selectedColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
                 break;
-            
+
             case "darken":
                 console.log(square.style.backgroundColor);
                 square.style.filter.brightness = "50%";
@@ -73,10 +71,9 @@ function colorizeButtons() {
 
         button.addEventListener("click", () => {
             colorButtons.forEach(button => {
-                if (button.classList[button.classList.length - 1] === "selected") {
-                    button.classList.remove("selected");
-                };
+                if (button.classList.contains("selected")) button.classList.remove("selected");
             });
+            
             button.classList.add("selected");
             currentColor = button.value;
         });
